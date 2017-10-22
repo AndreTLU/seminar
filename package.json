@@ -1,0 +1,19 @@
+{
+  "name": "seminaritoo",
+  "version": "1.0.0",
+  "description": "Seminaritoo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreTLU/seminar.git"
+  },
+  "author": "Andre Post",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreTLU/seminar/issues"
+  },
+  "homepage": "https://github.com/AndreTLU/seminar#readme"
+}
