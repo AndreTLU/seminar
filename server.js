@@ -6,8 +6,8 @@ var request = require('request');
 var app = express();
 
 var http = require('http');
-var server = http.createServer();
-var port = process.env.PORT || 1337;
+var server = http.createServer(app);
+var port = process.env.PORT || 8080;
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
