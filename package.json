@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/AndreTLU/seminar/issues"
   },
-  "homepage": "https://github.com/AndreTLU/seminar#readme"
+  "homepage": "https://github.com/AndreTLU/seminar#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "request": "^2.83.0"
+  }
 }
