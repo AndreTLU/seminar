@@ -14,6 +14,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, '/public')));
 
+app.all('/*', function(req,res, next){
+    res.sendFile('/public/index.html', {root:__dirname});
+});
+
 server.listen(port, function(){
     console.log('Server started on port ' + port);
-})
+});
