@@ -15,3 +15,5 @@ router.get('/ee', function(req, res){
         }
     ); 
 });
+
+module.exports = router;
