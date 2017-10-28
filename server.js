@@ -17,7 +17,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.use('/api/ilm', ilm);
-
+app.all('/sw.js', function(req,res,next){
+    res.sendFile('/public/js/sw.js', {root:__dirname});
+});
 app.all('/*', function(req,res, next){
     res.sendFile('/public/index.html', {root:__dirname});
 });
