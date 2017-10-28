@@ -7,7 +7,6 @@ angular.module('seminaritoo')
                     if (response) {
                         response.json().then(function (json) {
                             console.log('Uuendan vahemälust');
-                            $rootScope.requesPending = false;
                             $scope.json = json;
                             $scope.$apply();
                         })
