@@ -9,7 +9,7 @@ router.get('/ee', function(req, res){
         json: true
     },
         function(err, response, body){
-            if(!error && response.statusCode === 200){
+            if(!err && response.statusCode === 200){
                 res.status(200).json(body);
             }
         }
