@@ -39,11 +39,11 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch',
 function (event) {
     console.log('Service Worker - FETCH ', event.request.url);
-    var dataUrl = "/api/ilm/ee";
-    if (event.request.url.indexOf(dataUrl) > -1) {
+    if (event.request.url.indexOf("/api/ilm/ee") > -1) {
         event.respondWith(
             fetch(event.request)
                 .then(function (response) {
+                    caches.delete(dataCacheName);
                     return caches.open(dataCacheName).then(function (cache) {
                         cache.put(event.request.url, response.clone());
                         return response;
