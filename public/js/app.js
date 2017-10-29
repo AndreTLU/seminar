@@ -3,6 +3,12 @@ angular.module('seminaritoo', ['ui.router', 'ngResource'])
         function($stateProvider, $urlRouterProvider, $locationProvider){
             $urlRouterProvider.otherwise('/');
             registerServiceWorker();
+            $stateProvider
+                .state('home', {
+                    url:'/',
+                    templateUrl: 'js/home/home.html',
+                    controller: 'HomeCtrl'
+                });
             $locationProvider.html5Mode(true);
         }    
 ]);
