@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 var request = require('request');
 
-router.get('/ee', function(req, res){
-    var url = "http://ilm.ee/sisu/2015/json_eesti_linnade_ilm.php3?l=1";
+router.get('/ee/:city', function(req, res){
+    var url = "http://ilm.ee/sisu/2015/json_eesti_linnade_ilm.php3?l="+req.params.city;
     request({
         url: url,
         json: true

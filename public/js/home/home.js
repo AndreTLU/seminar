@@ -1,10 +1,12 @@
 angular.module('seminaritoo')
 .controller('HomeCtrl', ['$http', '$scope', '$rootScope',
     function($http, $scope, $rootScope){
-        $scope.getData = function () {
+        //$scope.city =1;
+        $scope.getData = function (city=1) {
             if ('caches' in window) {
-                caches.match("/api/ilm/ee").then(function (response) {
+                caches.match("/api/ilm/ee/"+city).then(function (response) {
                     if (response) {
+                        console.log(response);
                         response.json().then(function (json) {
                             console.log('Uuendan vahemälust');
                             $scope.json = json;
@@ -13,7 +15,7 @@ angular.module('seminaritoo')
                     }
                 })
             }
-            $http.get('/api/ilm/ee').then(function (data) {
+            $http.get('/api/ilm/ee/'+city).then(function (data) {
                 console.log(data);
                 console.log('Uuendan veebist');
                 $scope.json = data.data;

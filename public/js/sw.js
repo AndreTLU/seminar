@@ -39,14 +39,13 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch',
 function (event) {
     console.log('Service Worker - FETCH ', event.request.url);
-    var dataUrl = "https://seminaritoo.azurewebsites.net/api/ilm/ee";
+    var dataUrl = "/api/ilm/ee";
     if (event.request.url.indexOf(dataUrl) > -1) {
         event.respondWith(
             fetch(event.request)
                 .then(function (response) {
                     return caches.open(dataCacheName).then(function (cache) {
                         cache.put(event.request.url, response.clone());
-                        console.log('Service worker Fetched & cached data');
                         return response;
                     })
                 })
