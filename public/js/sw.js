@@ -12,7 +12,6 @@ var urlsToCache = [
     
 ];
 self.addEventListener('install', function(event) {
-    // Perform install steps
       console.log('Installing Service Worker!');
     event.waitUntil(
         caches.open(cacheName)
@@ -33,7 +32,7 @@ self.addEventListener('install', function(event) {
                     }
                 }))
             })
-    ); return self.clients.claim();
+    );
     }
 );
 self.addEventListener('fetch',
