@@ -36,7 +36,7 @@ self.addEventListener('activate', function (event) {
 self.addEventListener('fetch',
     function (event) {
         console.log('Service Worker - FETCH ', event.request.url);
-        if (event.request.url.indexOf("https://seminaritoo.azurewebsites.net/api/ilm/ee") > -1) {
+        if (event.request.url.indexOf("/api/ilm/ee") > -1) {
             event.respondWith(
                 fetch(event.request)
                     .then(function (response) {
