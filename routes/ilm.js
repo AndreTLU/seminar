@@ -12,7 +12,7 @@ router.get('/ee/:city', function(req, res){
         function(err, response, data){
             if(!err && response.statusCode === 200){
                 var tempString = data.link;
-                cityName = data.link.slice(1,-1);
+                cityName = tempString.slice(1,-1);
                 request({
                 url: "https://ilm.ee/sisu/2015/json_reaal_linn.php3?linn=L*"+cityName+"*0",
                 json: true},function(err, response, body){
