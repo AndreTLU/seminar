@@ -1,0 +1,7 @@
+.parent{
+    float:left;
+    padding-bottom: 30px;
+}
+.parent div{
+    float:left;
+}

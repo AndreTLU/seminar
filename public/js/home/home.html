@@ -1,24 +1,14 @@
 <div >
-    Hetkel: {{json.linn[1]}} {{json.temp}}
     <br>
-    {{json.l[1].d[0]}} {{json.linn[1]}} {{json.l[1].td}}
-    <br>
-    {{json.l[2].d[0]}} {{json.linn[1]}} {{json.l[2].td}}
-    <br>
-    {{json.l[3].d[0]}} {{json.linn[1]}} {{json.l[3].td}}
-    <br>
-    {{json.l[4].d[0]}} {{json.linn[1]}} {{json.l[4].td}}
-    <br>
-    {{json.l[5].d[0]}} {{json.linn[1]}} {{json.l[5].td}}
-    <br>
-    {{json.l[6].d[0]}} {{json.linn[1]}} {{json.l[6].td}}
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="display-3">{{json.temp}}°C {{json.linn[1]}}</h1>
-            <p class="lead">
-
-            </p>
-        </div>
+            <div class="jumbotron">
+                    <div class="parent" style="
+                    padding-bottom: 40px;">
+                        <div style="float:left">
+                            <h1 class="display-3">{{json.temp}}°C {{json.linn[1]}}</h1>
+                        </div> <div style="float: left;margin-left: 20px;padding-top: 25px;font-weight: bold;">Niiskus: {{json.extra.ilm.niiskus}}      Tuul: {{json.extra.ilm.tuul}} <br> Vihm: {{json.extra.ilm.vihm}}    Rõhk: {{json.extra.ilm.rohk}}</div>
+                    </div>
+                </div>
         <div class="row marketing">
             <div class="col">
                 <h4>{{json.l[1].d[0]}} {{json.l[1].td}}°C</h4>
@@ -30,7 +20,7 @@
             </div>
             <div class="col">
                 <h4>{{json.l[3].d[0]}} {{json.l[3].td}}°C</h4>
-                <p>{{json.l[1].dt}}</p>
+                <p>{{json.l[3].dt}}</p>
             </div>
             <div class="col">
                 <h4>{{json.l[4].d[0]}} {{json.l[4].td}}°C</h4>

@@ -12,7 +12,9 @@ angular.module('seminaritoo')
                                 console.log(response);
                                 response.json().then(function (json) {
                                     console.log('Uuendan vahemälust');
+                                    
                                     $scope.json = json;
+                                    console.log($scope.json);
                                     $scope.$apply();
 
                                 })
